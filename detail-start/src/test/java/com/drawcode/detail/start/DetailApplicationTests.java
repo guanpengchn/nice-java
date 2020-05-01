@@ -1,4 +1,4 @@
-package com.drawcode.detail;
+package com.drawcode.detail.start;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

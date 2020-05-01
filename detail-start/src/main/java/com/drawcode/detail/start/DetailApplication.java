@@ -1,4 +1,4 @@
-package com.drawcode.detail;
+package com.drawcode.detail.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
