@@ -28,7 +28,6 @@
         <dependency>
             <groupId>com.drawcode</groupId>
             <artifactId>detail-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
