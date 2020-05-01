@@ -1,4 +1,4 @@
 package com.drawcode.detail.client;
 
-public class Test {
+public class Test2 {
 }

@@ -4,14 +4,14 @@
 
     <parent>
         <groupId>com.drawcode</groupId>
-        <artifactId>detail</artifactId>
+        <artifactId>detail-page</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>detail-start</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>detail-start</name>
 
     <dependencies>
@@ -28,7 +28,9 @@
         <dependency>
             <groupId>com.drawcode</groupId>
             <artifactId>detail-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
 
@@ -37,6 +39,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.drawcode.detail.start.DetailApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
