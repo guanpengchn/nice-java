@@ -39,9 +39,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.drawcode.detail.start.DetailApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>

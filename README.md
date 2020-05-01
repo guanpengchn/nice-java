@@ -1,3 +1,10 @@
+## 启动
+
+```shell
+$ mvn clean install && mvn spring-boot:run -pl detail-start
+```
+
+
 ## 架构
 
 主要分为 3 层结构
