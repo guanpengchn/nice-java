@@ -5,18 +5,19 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.drawcode</groupId>
-	<artifactId>detail</artifactId>
+	<artifactId>detail-page</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>detail</name>
+	<name>detail-page</name>
 
 	<properties>
 		<java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
     <modules>
@@ -29,11 +30,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+            <version>2.2.6.RELEASE</version>
 		</dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.2.6.RELEASE</version>
         </dependency>
 
 		<dependency>
@@ -48,23 +51,11 @@
 			</exclusions>
 		</dependency>
 
-        <dependency>
-            <groupId>com.drawcode</groupId>
-            <artifactId>detail-service</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.drawcode</groupId>
-            <artifactId>detail-client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 	</dependencies>
 
 	<build>
-		<plugins>
-
-		</plugins>
+        <plugins>
+        </plugins>
 	</build>
 
 </project>
