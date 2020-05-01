@@ -18,6 +18,12 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+    <modules>
+        <module>detail-client</module>
+        <module>detail-service</module>
+        <module>detail-start</module>
+    </modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
