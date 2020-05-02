@@ -1,5 +1,8 @@
 package com.drawcode.detail.service;
 
+import com.drawcode.detail.service.annoation.Have;
+import com.drawcode.detail.service.base.BaseAbility;
+
 public class TitleAbility extends BaseAbility {
 
     @Have
@@ -13,6 +16,6 @@ public class TitleAbility extends BaseAbility {
 
     @Override
     public void init() {
-        data = "商品标题";
+        data = "TitleAbility" + "{" + priceAbility.getData() + soldAbility.getData() + rateAbility.getData() + "}";
     }
 }

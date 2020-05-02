@@ -1,21 +1,3 @@
-## 输出
-
-```
-[
-  {
-    "TitleAbility": TitleAbility
-  },
-  {
-    "PriceAbility": PriceAbility
-  },
-  {
-    "TagAbility": TagAbility,
-    "BannerAbility": BannerAbility
-  }
-]
-```
-
-
 ## 启动
 
 ```shell

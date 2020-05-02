@@ -1,5 +1,8 @@
 package com.drawcode.detail.service;
 
+import com.drawcode.detail.service.annoation.Have;
+import com.drawcode.detail.service.base.BaseAbility;
+
 public class PriceAbility extends BaseAbility {
 
     @Have
@@ -10,7 +13,7 @@ public class PriceAbility extends BaseAbility {
 
     @Override
     public void init() {
-        data = "价格";
+        data = "PriceAbility" + "{" + bannerAbility.getData() + tagAbility.getData() + "}";
     }
 }
 

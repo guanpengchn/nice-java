@@ -1,4 +1,4 @@
-package com.drawcode.detail.service;
+package com.drawcode.detail.service.annoation;
 
 import java.lang.annotation.*;
 
