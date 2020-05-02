@@ -6,7 +6,10 @@ public class TitleAbility extends BaseAbility {
     private PriceAbility priceAbility;
 
     @Have
-    private TagAbility tagAbility;
+    private SoldAbility soldAbility;
+
+    @Have
+    private RateAbility rateAbility;
 
     @Override
     public void init() {
