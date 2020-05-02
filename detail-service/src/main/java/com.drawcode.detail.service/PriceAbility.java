@@ -14,6 +14,11 @@ public class PriceAbility extends BaseAbility {
     @Override
     public void init() {
         data = "PriceAbility" + "{" + bannerAbility.getData() + tagAbility.getData() + "}";
+        try {
+            Thread.sleep(2000);// 主线程每隔1秒钟，打印当前时钟时间
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 

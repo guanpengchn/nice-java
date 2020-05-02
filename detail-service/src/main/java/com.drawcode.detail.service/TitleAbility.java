@@ -17,5 +17,10 @@ public class TitleAbility extends BaseAbility {
     @Override
     public void init() {
         data = "TitleAbility" + "{" + priceAbility.getData() + soldAbility.getData() + rateAbility.getData() + "}";
+        try {
+            Thread.sleep(500);// 主线程每隔1秒钟，打印当前时钟时间
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
