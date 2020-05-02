@@ -6,11 +6,13 @@ public class TagAbility extends BaseAbility {
 
     @Override
     public void init() {
-        data = "TagAbility:";
+        System.out.println(this.getClass().getName() + "enter");
+        data = "TagAbility";
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println(data);
     }
 }

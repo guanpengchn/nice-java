@@ -16,11 +16,13 @@ public class TitleAbility extends BaseAbility {
 
     @Override
     public void init() {
+        System.out.println(this.getClass().getName() + "enter");
         data = "TitleAbility" + "{" + priceAbility.getData() + soldAbility.getData() + rateAbility.getData() + "}";
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println(data);
     }
 }

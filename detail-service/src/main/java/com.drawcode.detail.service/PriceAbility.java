@@ -13,12 +13,14 @@ public class PriceAbility extends BaseAbility {
 
     @Override
     public void init() {
+        System.out.println(this.getClass().getName() + "enter");
         data = "PriceAbility" + "{" + bannerAbility.getData() + tagAbility.getData() + "}";
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println(data);
     }
 }
 

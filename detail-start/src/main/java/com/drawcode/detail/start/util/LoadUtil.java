@@ -2,6 +2,8 @@ package com.drawcode.detail.start.util;
 
 import com.drawcode.detail.service.RootAbility;
 import com.drawcode.detail.service.annoation.Have;
+import com.sun.codemodel.internal.JClass;
+import sun.tools.jconsole.inspector.XObject;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -9,13 +11,13 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class LoadUtil {
-    public static List<Map<String, Class>> loadAll() {
-        List<Map<String, Class>> resList = new ArrayList<>();
+    public static List<List<Class>> loadAll() {
+        List<List<Class>> resList = new ArrayList<>();
         Class rootClass = RootAbility.class;
 
-        Map<String, Class> rootMap = new HashMap<>();
-        rootMap.put(rootClass.getName(), rootClass);
-        resList.add(rootMap);
+        List<Class> rootList = new ArrayList<>();
+        rootList.add(rootClass);
+        resList.add(rootList);
 
         Queue<Class> classQueue = new LinkedList<>();
         classQueue.add(rootClass);
@@ -24,19 +26,19 @@ public class LoadUtil {
             Class clazz = classQueue.poll();
             Field[] fields = clazz.getDeclaredFields();
 
-            Map<String, Class> clazzMap = new HashMap<>();
+            List<Class> clazzList = new ArrayList<>();
 
             for (Field field : fields) {
                 Have have = field.getAnnotation(Have.class);
                 if (have != null) {
                     Class childClass = field.getType();
                     classQueue.add(childClass);
-                    clazzMap.put(childClass.getName(), childClass);
+                    clazzList.add(childClass);
                 }
             }
 
-            if (!clazzMap.isEmpty()) {
-                resList.add(clazzMap);
+            if (!clazzList.isEmpty()) {
+                resList.add(clazzList);
             }
         }
 
@@ -47,11 +49,47 @@ public class LoadUtil {
     }
 
 
-    public static void createThreadPool(List<Map<String, Class>> abilityList) {
+    public static void createThreadPool(List<List<Class>> abilityList) {
         ThreadFactory threadFactory = new DetailThreadFactory();
         ExecutorService executorService = new ThreadPoolExecutor(
                 3, 5, 1, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<Runnable>(), threadFactory);
+        Map<String, Object> abilityMap = new HashMap<>();
+        for(List<Class> list: abilityList) {
+            List<Future> futureList = new ArrayList<>();
+            for(Class clazz: list) {
+                Future future = executorService.submit(new Runnable() {
+                    public void run() {
+                        try {
+                            Object object = clazz.newInstance();
+                            abilityMap.put(clazz.getName(), object);
+                            Field[] fields = clazz.getDeclaredFields();
+                            for(Field field: fields) {
+                                Have have = field.getAnnotation(Have.class);
+                                if (have != null) {
+                                    Class childClass = field.getType();
+                                    field.setAccessible(true);
+                                    field.set(object,abilityMap.get(childClass.getName()));
+                                }
+                            }
+                            clazz.getDeclaredMethod("init").invoke(object);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                futureList.add(future);
+            }
+            for(Future future: futureList) {
+                try {
+                    future.get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
 
 
     }
