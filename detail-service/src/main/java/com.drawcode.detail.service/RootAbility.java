@@ -12,7 +12,7 @@ public class RootAbility extends BaseAbility {
     public void init() {
         data = "RootAbility" + "{" + titleAbility.getData() + "}";
         try {
-            Thread.sleep(1000);// 主线程每隔1秒钟，打印当前时钟时间
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

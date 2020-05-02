@@ -8,7 +8,7 @@ public class SoldAbility extends BaseAbility {
     public void init() {
         data = "SoldAbility";
         try {
-            Thread.sleep(2000);// 主线程每隔1秒钟，打印当前时钟时间
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
