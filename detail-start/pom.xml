@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+    <!--parent使用的即为父pom.xml的信息-->
     <parent>
         <groupId>com.drawcode</groupId>
         <artifactId>detail-page</artifactId>
@@ -11,9 +12,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>detail-start</artifactId>
-    <packaging>jar</packaging>
+    <packaging>jar</packaging> <!-- 注意此处要配置为jar -->
     <name>detail-start</name>
 
+    <!--子pom.xml不必添加dependencyManagement-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -25,6 +27,7 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!--这里可以看到因为父pom.xml已经引用了自身项目的包模块，所以这里可以不加version直接使用-->
         <dependency>
             <groupId>com.drawcode</groupId>
             <artifactId>detail-service</artifactId>
@@ -35,6 +38,7 @@
 
     <build>
         <plugins>
+            <!--因为启动类在detail-start中，所以此处必须添加该plugin-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

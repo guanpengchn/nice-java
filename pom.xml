@@ -11,7 +11,7 @@
     <groupId>com.drawcode</groupId>
     <artifactId>detail-page</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>pom</packaging>  <!-- 此处必须为pom -->
     <name>detail-page</name>
 
     <properties>
@@ -20,12 +20,14 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <!-- modules即为父子关系 -->
     <modules>
         <module>detail-client</module>
         <module>detail-service</module>
         <module>detail-start</module>
     </modules>
 
+    <!-- dependencyManagement非常重要，决定了子pom.xml是否可以直接引用父pom.xml的包 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -52,12 +54,15 @@
                 </exclusions>
             </dependency>
 
+            <!--注意这个包就是项目本身的模块-->
             <dependency>
                 <groupId>com.drawcode</groupId>
                 <artifactId>detail-service</artifactId>
                 <version>${project.version}</version>
+                <!-- 这个版本就表示0.0.1-SNAPSHOT -->
             </dependency>
 
+            <!--注意这个包就是项目本身的模块-->
             <dependency>
                 <groupId>com.drawcode</groupId>
                 <artifactId>detail-client</artifactId>
@@ -68,6 +73,7 @@
 
     <build>
         <plugins>
+            <!-- 注意此处为空 -->
         </plugins>
     </build>
 
