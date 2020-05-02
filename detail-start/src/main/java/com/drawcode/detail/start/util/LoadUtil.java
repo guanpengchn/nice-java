@@ -2,8 +2,6 @@ package com.drawcode.detail.start.util;
 
 import com.drawcode.detail.service.RootAbility;
 import com.drawcode.detail.service.annoation.Have;
-import com.sun.codemodel.internal.JClass;
-import sun.tools.jconsole.inspector.XObject;
 
 import java.lang.reflect.Field;
 import java.util.*;
