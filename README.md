@@ -3,14 +3,14 @@
 ```
 [
   {
-    title: TitleAbility
+    "TitleAbility": TitleAbility
   },
   {
-    price: PriceAbility
+    "PriceAbility": PriceAbility
   },
   {
-    tag: TagAbility,
-    banner: BannerAbility
+    "TagAbility": TagAbility,
+    "BannerAbility": BannerAbility
   }
 ]
 ```
