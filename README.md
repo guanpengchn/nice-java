@@ -1,3 +1,21 @@
+## 输出
+
+```
+[
+  {
+    title: TitleAbility
+  },
+  {
+    price: PriceAbility
+  },
+  {
+    tag: TagAbility,
+    banner: BannerAbility
+  }
+]
+```
+
+
 ## 启动
 
 ```shell
