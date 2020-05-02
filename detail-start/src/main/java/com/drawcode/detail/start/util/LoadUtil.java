@@ -42,13 +42,18 @@ public class LoadUtil {
 
         Collections.reverse(resList);
 
+        createThreadPool(resList);
         return resList;
     }
 
-    public static void createThreadPool() {
+
+    public static void createThreadPool(List<Map<String, Class>> abilityList) {
         ThreadFactory threadFactory = new DetailThreadFactory();
         ExecutorService executorService = new ThreadPoolExecutor(
-                3, 5, 1, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(), threadFactory);
+                3, 5, 1, TimeUnit.SECONDS,
+                new LinkedBlockingQueue<Runnable>(), threadFactory);
+
+
     }
 
     static class DetailThreadFactory implements ThreadFactory {
