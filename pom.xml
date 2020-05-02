@@ -55,9 +55,14 @@
             <dependency>
                 <groupId>com.drawcode</groupId>
                 <artifactId>detail-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.drawcode</groupId>
+                <artifactId>detail-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
