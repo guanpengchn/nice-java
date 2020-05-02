@@ -14,6 +14,11 @@
     <packaging>jar</packaging>
     <name>detail-service</name>
 
+    <!--detail-service依赖于detail-client-->
     <dependencies>
+        <dependency>
+            <groupId>com.drawcode</groupId>
+            <artifactId>detail-client</artifactId>
+        </dependency>
     </dependencies>
 </project>
