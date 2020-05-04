@@ -11,19 +11,14 @@ import java.util.TimerTask;
  */
 public class HeapOOM {
     public static void main(String[] args) throws InterruptedException {
-        List<Object> list = new ArrayList<Object>();
+        List<Test1> list = new ArrayList<>();
 
 //        while(true) {
 //            list.add(new Object());
 //        }
 
-        Timer timer = new Timer();
         while(true) {
-            timer.schedule(new TimerTask() {
-                public void run() {
-                    list.add(new Object());
-                }
-            }, 10);
+            list.add(new Test1());
         }
 
     }
