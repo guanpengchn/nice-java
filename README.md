@@ -80,6 +80,23 @@
 
 - [动态代理与RPC](https://juejin.im/post/5ea77a51e51d454dcc1fb250?utm_source=gold_browser_extension)
 
+### 分布式
+
+- [raft算法动画演示](http://www.kailing.pub/raft/index.html?nsukey=mHQugo9pryc5R7vYBynFJPPH5K3KrNttI8P5MYwOi2cFpmMxgxhRryWDRZuZIdGxge4QIETWoqGON2Iuv2mEnZkBIDqtf9d2%2Bo4wV%2FNT4LuqOer6X3Xy99GSU0tYw13PUI7Pqi9sdXQAB5%2FgzCaIExmvRixEnVxMpUX3fHxTR%2BmDNi5IcwajMxJFf4olTuHepeK9lv6x%2F%2B3NEOPCr22Wxg%3D%3D)
+
+- [高级开发不得不懂的Redis Cluster数据分片机制](https://juejin.im/post/5cf7c811f265da1b7a4b6368)
+
+- [Redis集群 cluster-slot操作指令](https://blog.csdn.net/shuyun123456789/article/details/60868718)
+
+- [五分钟看懂一致性哈希算法](https://juejin.im/post/5ae1476ef265da0b8d419ef2)
+
+### 数据库
+
+- [详解Mysql索引原理及其优化](https://juejin.im/post/5d4d82caf265da039c6360ff)
+
+- [MySQL的索引](https://mp.weixin.qq.com/s/ktEBA03Kip4bYYkp2ktiIQ)
+
+- [MySQL的索引（中）](https://mp.weixin.qq.com/s/ktEBA03Kip4bYYkp2ktiIQ)
 
 ### 其他
 
