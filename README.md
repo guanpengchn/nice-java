@@ -56,6 +56,8 @@
 
 - [从ReentrantLock的实现看AQS的原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
 
+- [孤儿进程与僵尸进程](https://www.cnblogs.com/Anker/p/3271773.html)
+
 ### Maven
 
 - [Maven实战（六）--- dependencies与dependencyManagement的区别](https://blog.csdn.net/liutengteng130/article/details/46991829)
@@ -97,6 +99,16 @@
 - [MySQL的索引](https://mp.weixin.qq.com/s/ktEBA03Kip4bYYkp2ktiIQ)
 
 - [MySQL的索引（中）](https://mp.weixin.qq.com/s/ktEBA03Kip4bYYkp2ktiIQ)
+
+### 操作系统
+
+- [什么是操作系统啊](https://juejin.im/post/5e3cd4206fb9a07cda095dee)
+
+### 计算机网络
+
+- [TCP协议灵魂之问，巩固你的网路底层基础](https://juejin.im/post/5e527c58e51d4526c654bf41)
+
+- [HTTP灵魂之问，巩固你的 HTTP 知识体系](https://juejin.im/post/5e76bd516fb9a07cce750746)
 
 ### 其他
 
